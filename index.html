@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">  
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="home">
+            <div class="container">
+                <nav>
+                    <h2 class="logo">TRUCMY.INFO</h2>
+                    <ul>
+                        <li><a href="#" class="menu">HOME</a></li>
+                        <li><a href="#" class="menu">ABOUT</a></li>
+                        <li><a href="#" class="menu">SERVICES</a></li>
+                        <li><a href="#" class="menu">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                     <p>WELCOME TO MY WEBSITE</p>
+                     <h1>Hi, I'm <span>Truc My</span><br>from Vietnam<h1>
+                </div>
+            </div>
+        </div>
+        <!----------about--------->
+        
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="1.jpg">
+                        <img src="hinh-anh-co-gai-buon-dep-1.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Tôi tên Nguyễn Thị Trúc My. Là sinh viên ngành Sư phạm Tin Học khóa 45, trường Đại học Cần Thơ.
+                            Thời gian rảnh rỗi tôi thường nghe nhạc, chơi thể thao,... Đặc biệt tôi rất thích nấu ăn.<p>
+                        
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('Kĩ năng')"><br> Kĩ năng</p>
+                            <p class="tab-links active-link" onclick="opentab('Đam mê')"></br> Đam mê</p>
+                            <p class="tab-links" onclick="opentab('Sở thích')"><br> Sở thích</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Kĩ năng">
+                            <ul>
+                                <li><span>Dạy</span><br>Học sinh Tiểu học, THCS, THPT.</li>
+                                <li><span>Kĩ năng mềm</span><br>Giao tiếp, thuyết trình, ham học hỏi.</li>
+                                <li><span>Thông tin</span><br>Word, Excel, PowerPoint</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="Đam mê">
+                            <ul>
+                                <li><span>Võ thuật</span><br>Tôi rất thích học và dạy võ. Hiện tại tôi đang học và dạy 2 môn võ.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Sở thích">
+                            <ul>
+                                <li><span>Sở thích</span><br>Tôi thích chơi thể thao, nấu ăn.  <br> </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
